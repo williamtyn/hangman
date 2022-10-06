@@ -12,27 +12,31 @@ def random_word():
 def letter_in_word(word):
     """
     User input of letter/word and validating that input 
-    contains letter and nothing else
+    contains letter and nothing else.
     """
-    lives = 6
-    guessed_letters = []
+    lives = 6 #how many attempts the player have
+    guessed_letters = [] #will display already guessed letters for player
+    hidden_word = '_' * len(word)
     while lives > 0:
         print(word)
+        print(hidden_word)
         print(f'You have {lives} lives left and have guessed {guessed_letters}\n')
         guess = input('Please input a letter/word between A - Z\n').upper()
         if (guess.isalpha()) == True:
-            if guess in word:
+            if guess in word and guess == word:
+                print(f'Gongrats, {guess} is the right word')
+                break
+            elif guess in word:
                 guessed_letters += guess
-                print(guessed_letters)
+                print(f'{guess} is in the word')
             elif guess != word:
                 lives -= 1
                 guessed_letters += guess
-                print(f'{lives} lives left')
-                print(f'You have guessed {guessed_letters}')    
-        elif (guess.isalpha()) != True:
+                print(f'{guess} is NOT in the word')    
+        elif (guess.isalpha()) == False:
             print('Your guess can only contain letters A - Z, try again!\n')
             break
-    print('You lost the Game!')
+    print('You want to play again?')
             
     
 def play_game():
