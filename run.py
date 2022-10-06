@@ -44,10 +44,14 @@ def letter_in_word(word):
         elif (guess.isalpha()) == False:
             print('Your guess can only contain letters A - Z, try again!\n')
             break #will be removed before deployment
-    print('You want to play again?')
+    print('End of game\n')
 
+def play_again():
+    play = input('Do you want to play again? Please press Y\n').upper()
+    if play == 'Y':
+        play_game()
+    else break
 
-    
 def play_game():
     """
     Running main program
@@ -55,12 +59,15 @@ def play_game():
     word = random_word()
     print('Welcome to Hangman Game!\n')
     letter_in_word(word)
+    play_again()
 
 
 play_game()
 
+
 """
-#Function to display game over
+def game_over():
+    print('
 *****   ***  **  ** *****
 *      *   * *  * * *
 *  *** ***** *    * ***
@@ -72,4 +79,4 @@ play_game()
 *    *  *  *   ***   ****
 *    *  * *    *     * *
  ****    *     ***** *  *
-"""
+ ')"""
