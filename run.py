@@ -16,11 +16,12 @@ def letter_in_word(word):
     """
     lives = 6 #how many attempts the player have
     guessed_letters = [] #will display already guessed letters for player
+    guessed = False
     hidden_word = '_' * len(word)
     while lives > 0:
         print(word)
         print(hidden_word)
-        print(f'You have {lives} lives left and have guessed {guessed_letters}\n')
+        #print(f'You have {lives} lives left and have guessed {guessed_letters}\n')
         guess = input('Please input a letter/word between A - Z\n').upper()
         if (guess.isalpha()) == True:
             if guess in word and guess == word:
@@ -28,6 +29,13 @@ def letter_in_word(word):
                 break
             elif guess in word:
                 guessed_letters += guess
+                show_letters = list(hidden_word) #code to enumerate is inspiration from https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s
+                indices = [i for i,letter in enumerate(word) if letter == guess]
+                for index in indices:
+                    show_letters[index] = guess
+                hidden_word = ''.join(show_letters)
+                if '_' not in hidden_word:
+                    guessed = True 
                 print(f'{guess} is in the word')
             elif guess != word:
                 lives -= 1
@@ -35,19 +43,33 @@ def letter_in_word(word):
                 print(f'{guess} is NOT in the word')    
         elif (guess.isalpha()) == False:
             print('Your guess can only contain letters A - Z, try again!\n')
-            break
+            break #will be removed before deployment
     print('You want to play again?')
-            
+
+
     
 def play_game():
     """
     Running main program
     """
-    #lives = 6
-    #guessed_letters = []
     word = random_word()
     print('Welcome to Hangman Game!\n')
     letter_in_word(word)
 
 
 play_game()
+
+"""
+#Function to display game over
+*****   ***  **  ** *****
+*      *   * *  * * *
+*  *** ***** *    * ***
+*    * *   * *    * *
+****** *   * *    * *****
+
+ ****  *    *  ***** ****
+*    * *    *  *     *   *
+*    *  *  *   ***   ****
+*    *  * *    *     * *
+ ****    *     ***** *  *
+"""
