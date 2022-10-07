@@ -63,7 +63,7 @@ def play_again():
     play = input('Do you want to play again? Y/N\n').upper()
     if play == 'Y':
         play_game()
-    elif play =='N':
+    elif play == 'N':
         print('Thanks for playing Hangman!')
     else:
         print('Thanks for playing Hangman!')
@@ -87,8 +87,14 @@ def play_game():
     letter_in_word(word)
     play_again()
 
+def choose_nickname():
+    nickname = input('Choose a nickname:\n').upper()
+    print(f'Welcome {nickname}!')
+    return nickname
+
 print('Welcome to Hangman Game!\n')
 print(hangman)
+choose_nickname()
 see_rules()
 play_game()
 
