@@ -69,7 +69,11 @@ def play_again():
 def see_rules():
     rules = input('Do you want to see the rules? Y/N\n').upper()
     if rules == 'Y':
-        print('Hangman is game of words where you guess the secret word the computer shuffles.\nYou can press any letter between A – Z to guess if that letter is in the word.\nIf you think you know the word you can guess by typing it in.\nFor each wrong word or letter you will lose one of your lives.\nYou have 6 lives to guess the right word before it is Game Over!\n')
+        print('Hangman is game of words where you guess the secret word the computer shuffles.')
+        print('You can press any letter between A – Z to guess if that letter is in the word.')
+        print('If you think you know the word you can guess by typing it in.')
+        print('For each wrong word or letter you will lose one of your lives.')
+        print('You have 6 lives to guess the right word before it is Game Over!\n')
     else:
         play_game()
 
