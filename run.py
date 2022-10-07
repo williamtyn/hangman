@@ -35,7 +35,7 @@ def letter_in_word(word):
             if guess in word and guess == word:
                 print(f'Gongrats, {guess} is the right word')
                 break
-            elif guess in word:
+            elif guess in word and guess not in guessed_letters:
                 guessed_letters += guess
                 show_letters = list(hidden_word) #code to enumerate is inspiration from https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s
                 indices = [i for i,letter in enumerate(word) if letter == guess]
@@ -45,6 +45,8 @@ def letter_in_word(word):
                 if '_' not in hidden_word:
                     guessed = True 
                 print(f'{guess} is in the word\n')
+            elif guess in guessed_letters:
+                print(f'You have already guessed {guess}')
             elif guess != word:
                 lives -= 1
                 guessed_letters += guess
