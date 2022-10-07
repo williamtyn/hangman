@@ -1,6 +1,6 @@
 import random
+from words import words
 
-words = ['egg', 'thanks', 'problem', 'green', 'moving', 'history', 'camera', 'glasses', 'shower', 'jacket', 'popular', 'pumpkin']
 hangman = ["""
    +---+
    O   |
