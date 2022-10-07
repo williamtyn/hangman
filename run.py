@@ -21,29 +21,29 @@ def letter_in_word(word):
     User input of letter/word and validating that input 
     contains letter and nothing else.
     """
-    lives = 6 #how many attempts the player have
-    guessed_letters = [] #will display already guessed letters for player
+    lives = 3  #how many attempts the player have
+    guessed_letters = []  #will display already guessed letters for player
     guessed = False
     hidden_word = '_' * len(word)
     while lives > 0:
         print(word)
-        print(hidden_word)
         print(f'Lives: {lives}') 
-        print(f'Guessed: {guessed_letters}\n') 
+        print("Guessed:", ' '.join(guessed_letters))
+        print(hidden_word)
         guess = input('Please input a letter/word between A - Z\n').upper()
-        if (guess.isalpha()) == True:
+        if (guess.isalpha()) is True:
             if guess in word and guess == word:
                 print(f'Gongrats, {guess} is the right word')
                 break
             elif guess in word and guess not in guessed_letters:
                 guessed_letters += guess
-                show_letters = list(hidden_word) #code to enumerate is inspiration from https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s
+                show_letters = list(hidden_word)  #code to enumerate is of inspiration from https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s
                 indices = [i for i,letter in enumerate(word) if letter == guess]
                 for index in indices:
                     show_letters[index] = guess
                 hidden_word = ''.join(show_letters)
                 if '_' not in hidden_word:
-                    guessed = True 
+                    guessed is True 
                 print(f'{guess} is in the word\n')
             elif guess in guessed_letters:
                 print(f'You have already guessed {guess}')
@@ -51,7 +51,7 @@ def letter_in_word(word):
                 lives -= 1
                 guessed_letters += guess
                 print(f'{guess} is NOT in the word\n')    
-        elif (guess.isalpha()) == False:
+        elif (guess.isalpha()) is False:
             print('Your guess can only contain letters A - Z, try again!\n')
     print('Game Over!\n')
 
@@ -85,11 +85,11 @@ def play_game():
     """
     word = random_word()
     letter_in_word(word)
-    play_again()
+    
 
 def choose_nickname():
     nickname = input('Choose a nickname:\n').upper()
-    print(f'Welcome {nickname}!')
+    print(f'Welcome {nickname}!\n')
     return nickname
 
 print('Welcome to Hangman Game!\n')
@@ -97,6 +97,7 @@ print(hangman)
 choose_nickname()
 see_rules()
 play_game()
+play_again()
 
 """
 def game_over():
