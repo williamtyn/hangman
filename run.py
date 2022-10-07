@@ -1,6 +1,13 @@
 import random
 
 words = ['egg', 'thanks', 'problem', 'green', 'moving', 'history', 'camera', 'glasses', 'shower', 'jacket', 'popular', 'pumpkin']
+hangman = ["""
+   +---+
+   O   |
+  /|\  |
+  / \  |
+      ===
+    """]
 
 def random_word():
     """
@@ -21,7 +28,8 @@ def letter_in_word(word):
     while lives > 0:
         print(word)
         print(hidden_word)
-        print(f'You have {lives} lives left and have guessed {guessed_letters}\n')
+        print(f'Lives: {lives}') 
+        print(f'Guessed: {guessed_letters}\n') 
         guess = input('Please input a letter/word between A - Z\n').upper()
         if (guess.isalpha()) == True:
             if guess in word and guess == word:
@@ -43,16 +51,18 @@ def letter_in_word(word):
                 print(f'{guess} is NOT in the word\n')    
         elif (guess.isalpha()) == False:
             print('Your guess can only contain letters A - Z, try again!\n')
-    print('End of game\n')
+    print('Game Over!\n')
 
 
 def play_again():
     """
     Ask player if they want to play again. If not the program ends.
     """
-    play = input('Do you want to play again? Please press Y\n').upper()
+    play = input('Do you want to play again? Y/N\n').upper()
     if play == 'Y':
         play_game()
+    elif play =='N':
+        print('Thanks for playing Hangman!')
     else:
         print('Thanks for playing Hangman!')
 
@@ -72,6 +82,7 @@ def play_game():
     play_again()
 
 print('Welcome to Hangman Game!\n')
+print(hangman)
 see_rules()
 play_game()
 
@@ -106,3 +117,5 @@ def win_game
  * * * *    *   *   **  
   *   *    ***  *    *  *
 """
+
+
