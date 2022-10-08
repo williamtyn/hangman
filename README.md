@@ -2,7 +2,9 @@
 Here you could enjoy yourself guessing words or let you man get hanged if you guess wrong.
 
 ## Flowchart for project
-To look at why building my project
+To have some structure and to be able to understand which code and functions the program would have, i´ve created a flowchart using [Lucid](https://lucid.app/).
+
+In the flowchart you can see thoe whole flow from start to end. All code based on the flowchart and beyond that i´va also added a function to choose nickname for player.
 ![Flowchart image](assets/images/hangman_flowchart.png)
 
 ## Deployment
