@@ -76,8 +76,29 @@ As a workaround, you can add a PEP8 validator to your Gitpod Workspace directly 
 <h3 id="play-again">Play again</h3>
 
 <h2 id="user-stories">User stories</h2>
+
+### User Story 1
+As a player i want to play a wordgame against the computer to improve my spelling of english words.
+
+*The player get the opportunity to improve their spelling of words in the hangman game. They player get hints of the word when the guess a letter and need to both use their vocabulary and spelling to guess the right word.*
+
+### User Story 2
+As a player i want to be able to to choose my own nickname or player name to feel more satisfied if i win the game.
+
+*In the beginning of the game the player must choose a nickname to be able to play the game. If the player wins the get the Congrats message with their nickname, if they lose they get a well played message with their name.*
+
+### User Story 3
+As a player i want to be able to play the game many times with different words to keep practice my spelling.
+
+*In the words list you find a lot of different word which reduces the risk of the random word to be picked again and at the same time the player get many different words to train their spelling with. At the end of each game the player have the option to play again " Do you want to play again? Y/N ".*
+
 <h2 id="bugs">Bugs</h2>
+If the player want to change their nickname they need to end and restart the whole program. If they choose to play again after win or lose the game repeats with the same nickname.
+
 <h2 id="future-features">Future features</h2>
+
+### Change nickname
+In the future a feature for changing nickname could be applied if someone else want to play without cancelling the program and start over.
 <h2 id="technologies">Technologies</h2>
 <h2 id="deployment">Deployment</h2>
 <h2 id="credits">Credits</h2>
