@@ -10,6 +10,33 @@ hangman = ["""
           """]
 
 
+def choose_nickname():
+    """
+    As a player you can choose your player nickname
+    """
+    nickname = input('Choose a nickname:\n').upper()
+    print(f'Welcome {nickname}!\n')
+    return nickname
+
+
+def see_rules():
+    """
+    Player can choose to see rules before entering the game
+    """
+    rules = input('Do you want to see the rules? Y/N\n').upper()
+    if rules == 'Y':
+        print('Hangman is game of words where you guess the secret word'
+              'the computer shuffles.')
+        print('You can press any letter between A – Z to guess if that letter'
+              'is in the word.')
+        print('If you think you know the word you can guess by typing it in.')
+        print('For each wrong word or letter you will lose one of your lives.')
+        print('You have 6 lives to guess the right word before it is'
+              'Game Over!\n')
+    else:
+        play_game()
+
+
 def random_word():
     """
     Generates random word from list words.
@@ -29,7 +56,7 @@ def letter_in_word(word):
     guessed_letters = []  # will display already guessed letters for player
     guessed = False
     hidden_word = '_' * len(word)
-    while lives > 0:
+    while lives > 0 and guessed is False:
         print(word)
         print(f'Lives: {lives}') 
         print("Guessed:", ' '.join(guessed_letters))
@@ -37,27 +64,27 @@ def letter_in_word(word):
         guess = input('Please input a letter/word between A - Z\n').upper()
         if (guess.isalpha()) is True:
             if guess in word and guess == word:
-                print(f'Gongrats, {guess} is the right word')
+                print(f'Congrats, {guess} is the right word')
+                guessed = True
                 break
             elif guess in word and guess not in guessed_letters:
                 guessed_letters += guess
                 show_letters = list(hidden_word)  
                 ind = [i for i, letter in enumerate(word) if letter == guess]
                 for index in ind:  # code to enumerate is of inspiration
-                    show_letters[index] = guess  # from see above
+                    show_letters[index] = guess  # from see docstring
                 hidden_word = ''.join(show_letters)
-                if '_' not in hidden_word:
-                    guessed is True
-                print(f'{guess} is in the word\n')
             elif guess in guessed_letters:
                 print(f'You have already guessed {guess}')
             elif guess != word:
                 lives -= 1
-                guessed_letters += guess
-                print(f'{guess} is NOT in the word\n')    
+                guessed_letters += guess  
         elif (guess.isalpha()) is False:
             print('Your guess can only contain letters A - Z, try again!\n')
-    print('Game Over!\n')
+    if lives == 0:
+        print('Game over for you!')  # add nickname variable and f-string
+    else:
+        print('Well played!\n')
 
 
 def play_again():
@@ -73,36 +100,12 @@ def play_again():
         print('Thanks for playing Hangman!')
 
 
-def see_rules():
-    rules = input('Do you want to see the rules? Y/N\n').upper()
-    if rules == 'Y':
-        print('Hangman is game of words where you guess the secret word'
-              'the computer shuffles.')
-        print('You can press any letter between A – Z to guess if that letter'
-              'is in the word.')
-        print('If you think you know the word you can guess by typing it in.')
-        print('For each wrong word or letter you will lose one of your lives.')
-        print('You have 6 lives to guess the right word before it is'
-              'Game Over!\n')
-    else:
-        play_game()
-
-
 def play_game():
     """
     Running main program
     """
     word = random_word()
     letter_in_word(word)
-
-
-def choose_nickname():
-    """
-    As a player you can choose your player nickname
-    """
-    nickname = input('Choose a nickname:\n').upper()
-    print(f'Welcome {nickname}!\n')
-    return nickname
 
 
 print('Welcome to Hangman Game!\n')
