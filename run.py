@@ -36,8 +36,7 @@ def see_rules():
         print('For each wrong word or letter you will lose one of your lives.')
         print('You have 6 lives to guess the right word before it is'
               'Game Over!\n')
-    else:
-        play_game()
+
 
 
 def random_word():
@@ -57,9 +56,8 @@ def letter_in_word(word):
     """
     lives = 3  # how many attempts the player have
     guessed_letters = []  # will display already guessed letters for player
-    guessed = False
     hidden_word = '_' * len(word)
-    while lives > 0 and guessed is False:
+    while lives > 0:
         print(word)
         print(f'Lives: {lives}') 
         print("Guessed:", ' '.join(guessed_letters))
@@ -68,8 +66,7 @@ def letter_in_word(word):
         if (guess.isalpha()) is True:
             if guess in word and guess == word:
                 print(f'Congrats {nickname}, {guess} is the right word')
-                guessed = True
-                break
+                return True
             elif guess in word and guess not in guessed_letters:
                 guessed_letters += guess
                 show_letters = list(hidden_word)  
@@ -84,10 +81,7 @@ def letter_in_word(word):
                 guessed_letters += guess  
         elif (guess.isalpha()) is False:
             print('Your guess can only contain letters A - Z, try again!\n')
-    if lives == 0:
-        print(f'Game over for you {nickname}!')  # add nickname variable and f-string
-    else:
-        print('Well played!')
+    return False
 
 
 def play_again():
@@ -101,51 +95,57 @@ def play_again():
             print('Thanks for playing Hangman!')
             break
 
+
 def play_game():
     """
     Running main program
     """
     word = random_word()
-    letter_in_word(word)
+    gamestate = letter_in_word(word)
+    return gamestate
+
+
+def game_over():
+    gameover = """
+            *****   ***  **  ** *****
+            *      *   * *  * * *
+            *  *** ***** *    * ***
+            *    * *   * *    * *
+            ****** *   * *    * *****
+
+             ****  *    *  ***** ****
+            *    * *    *  *     *   *
+            *    *  *  *   ***   ****
+            *    *  * *    *     * *
+             ****    *     ***** *  *
+                """
+    print(gameover)
+
+
+def win_game():
+    win = """
+            *    *   ****  *     *
+            *  *   *    * *     *
+            *     *    * *     *
+            *     *    * *     *
+            *      ****   *****
+
+            *       *  ***  *    *  *
+            *       *   *   * *  *  *
+            *   *   *   *   *  * *  *
+            * * * *    *   *   **  
+            *   *    ***  *    *  *
+                """
+    print(win)
 
 
 print('Welcome to Hangman Game!\n')
 print(hangman)
 choose_nickname()
 see_rules()
-play_game()
+gamestate = play_game()
+if gamestate:
+    win_game()
+elif not gamestate:
+    game_over()
 play_again()
-
-"""
-def game_over():
-    print('
-*****   ***  **  ** *****
-*      *   * *  * * *
-*  *** ***** *    * ***
-*    * *   * *    * *
-****** *   * *    * *****
-
- ****  *    *  ***** ****
-*    * *    *  *     *   *
-*    *  *  *   ***   ****
-*    *  * *    *     * *
- ****    *     ***** *  *
- ')
-print(game_over())
-"""
-"""
-def win_game
-*     *  ****  *     *
- *   *  *    * *     *
-   *    *    * *     *
-   *    *    * *     *
-   *     ****   *****
-
-*       *  ***  *    *  *
-*       *   *   * *  *  *
-*   *   *   *   *  * *  *
- * * * *    *   *   **  
-  *   *    ***  *    *  *
-"""
-
-
