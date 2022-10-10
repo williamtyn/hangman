@@ -9,14 +9,17 @@ hangman = ["""
               ===
           """]
 
+nickname = ''
+
 
 def choose_nickname():
     """
     As a player you can choose your player nickname
     """
-    nickname = input('Choose a nickname:\n').upper()
+    global nickname 
+    choose_nick = input('Choose a nickname:\n')
+    nickname = choose_nick
     print(f'Welcome {nickname}!\n')
-    return nickname
 
 
 def see_rules():
@@ -64,7 +67,7 @@ def letter_in_word(word):
         guess = input('Please input a letter/word between A - Z\n').upper()
         if (guess.isalpha()) is True:
             if guess in word and guess == word:
-                print(f'Congrats, {guess} is the right word')
+                print(f'Congrats {nickname}, {guess} is the right word')
                 guessed = True
                 break
             elif guess in word and guess not in guessed_letters:
@@ -82,16 +85,16 @@ def letter_in_word(word):
         elif (guess.isalpha()) is False:
             print('Your guess can only contain letters A - Z, try again!\n')
     if lives == 0:
-        print('Game over for you!')  # add nickname variable and f-string
+        print(f'Game over for you! {nickname}')  # add nickname variable and f-string
     else:
-        print('Well played!\n')
+        print(f'Well played {nickname}!')
 
 
 def play_again():
     """
     Ask player if they want to play again. If not the program ends.
     """
-    play = input('Do you want to play again? Y/N\n').upper()
+    play = input(f'Do you want to play again {nickname}? Y/N\n').upper()
     if play == 'Y':
         play_game()
     elif play == 'N':
