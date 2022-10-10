@@ -38,7 +38,6 @@ def see_rules():
               'Game Over!\n')
 
 
-
 def random_word():
     """
     Generates random word from list words.
@@ -88,21 +87,26 @@ def play_again():
     """
     Ask player if they want to play again. If not the program ends.
     """
-    while True:
-        if input('Do you want to play again? Y/N\n').upper() == 'Y':
-            play_game()
-        else:
-            print('Thanks for playing Hangman!')
-            break
+    if input('Do you want to play again? Y/N\n').upper() == 'Y':
+        return True
+    else:
+        return False
 
 
-def play_game():
-    """
-    Running main program
-    """
-    word = random_word()
-    gamestate = letter_in_word(word)
-    return gamestate
+def game_loop():
+    print('Welcome to Hangman Game!\n')
+    print(hangman)
+    choose_nickname()
+    see_rules()
+    game = True
+    while game:
+        word = random_word()
+        gamestate = letter_in_word(word)
+        if gamestate:
+            win_game()
+        elif not gamestate:
+            game_over()
+        game = play_again()
 
 
 def game_over():
@@ -125,27 +129,18 @@ def game_over():
 def win_game():
     win = """
             *    *   ****  *     *
-            *  *   *    * *     *
-            *     *    * *     *
-            *     *    * *     *
-            *      ****   *****
+             *  *   *    * *     *
+              *     *    * *     *
+              *     *    * *     *
+              *      ****   *****
 
             *       *  ***  *    *  *
             *       *   *   * *  *  *
             *   *   *   *   *  * *  *
-            * * * *    *   *   **  
-            *   *    ***  *    *  *
+             * * * *    *   *   **  
+              *   *    ***  *    *  *
                 """
     print(win)
 
 
-print('Welcome to Hangman Game!\n')
-print(hangman)
-choose_nickname()
-see_rules()
-gamestate = play_game()
-if gamestate:
-    win_game()
-elif not gamestate:
-    game_over()
-play_again()
+game_loop()
