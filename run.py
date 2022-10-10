@@ -1,13 +1,13 @@
 import random  # import random library to random words from words.py
 from words import words
 
-hangman = ["""
+hangman = """
            +---+
            O   |
           /|\  |
           / \  |
               ===
-          """]
+          """
 
 nickname = ''
 
@@ -17,7 +17,7 @@ def choose_nickname():
     As a player you can choose your player nickname
     """
     global nickname 
-    choose_nick = input('Choose a nickname:\n')
+    choose_nick = input('Choose a nickname:')
     nickname = choose_nick
     print(f'Welcome {nickname}!\n')
 
@@ -85,23 +85,21 @@ def letter_in_word(word):
         elif (guess.isalpha()) is False:
             print('Your guess can only contain letters A - Z, try again!\n')
     if lives == 0:
-        print(f'Game over for you! {nickname}')  # add nickname variable and f-string
+        print(f'Game over for you {nickname}!')  # add nickname variable and f-string
     else:
-        print(f'Well played {nickname}!')
+        print('Well played!')
 
 
 def play_again():
     """
     Ask player if they want to play again. If not the program ends.
     """
-    play = input(f'Do you want to play again {nickname}? Y/N\n').upper()
-    if play == 'Y':
-        play_game()
-    elif play == 'N':
-        print('Thanks for playing Hangman!')
-    else:
-        print('Thanks for playing Hangman!')
-
+    while True:
+        if input('Do you want to play again? Y/N\n').upper() == 'Y':
+            play_game()
+        else:
+            print('Thanks for playing Hangman!')
+            break
 
 def play_game():
     """
