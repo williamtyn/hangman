@@ -152,7 +152,7 @@ If the player wants to change their nickname, they need to end and restart the w
 
 1. I got stuck in the while loop where the program checks the guesses. When the player guessed the right word, the loop broke, and at the end of the loop, a print with "Game Over" was shown.
 
-I solved that by changing the structure to return instead. So if the player guesses the right word, the function returns True. If the player loses all lives, the function returns False. By moving out the check for win or loss, I was able to solve the bug.
+*I solved that by changing the structure to return instead. So if the player guesses the right word, the function returns True. If the player loses all lives, the function returns False. By moving out the check for win or loss, I was able to solve the bug.*
 
 2. When deploying, I found that when a player guessed a word that was wrong, all letters were added to the guessed letters list. Because of that, the player couldn't try the letters separated again. Because of that, the player got stuck.
 
@@ -162,36 +162,36 @@ I solved that by changing the structure to return instead. So if the player gues
 <h2 id="future-features">Future features</h2>
 
 ### Change nickname
-In the future a feature for changing nickname could be applied if someone else want to play without cancelling the program and start over.
+In the future, a feature for changing nicknames could be added if someone else wants to play without having to cancel the program and start over.
 
 <h2 id="technologies">Technologies</h2>
 
-The project was built with [GitPod](https://gitpod.io/) and [GitHub](https://github.com/) 
-The project was deployed to [Heroku](https://dashboard.heroku.com/apps)
-Random Words was genereated by [Randomlists.com](https://www.randomlists.com/)
-To check spelling and grammar i used [Free Grammar Checker](https://quillbot.com/grammar-check)
-To make the Readme Mockup i used [Multi Device Mockup Generator](https://techsini.com/multi-mockup/)
-The library that was imported is **random** and **colorama**
+* The project was built with [GitPod](https://gitpod.io/) and [GitHub](https://github.com/)<br>
+* The project was deployed to [Heroku](https://dashboard.heroku.com/apps)<br>
+* Random Words was genereated by [Randomlists.com](https://www.randomlists.com/)<br>
+* To check spelling and grammar i used [Free Grammar Checker](https://quillbot.com/grammar-check)<br>
+* To make the Readme Mockup i used [Multi Device Mockup Generator](https://techsini.com/multi-mockup/)<br>
+* The library that was imported is **random** and **colorama**<br>
 
 <h2 id="deployment">Deployment</h2>
 
-1. Log in to Heroku and create new app.
-The first thing when deploying is to log in to [Heroku](https://dashboard.heroku.com/apps) and click new -> create app.
+1. Log in to Heroku and create a new app.
+The first thing when deploying is to log in to [Heroku](https://dashboard.heroku.com/apps) and click **new** then **create app**.
 
 ![Create new app](assets/images/create_new_app.png)
 
 2. Give your app a name.
-Then you need to select a new for your new app. I named my app "williams-hangman-game". Then select your region and press "Create App".
+Then you need to select a new name for your app. I named my app "williams-hangman-game". Then select your region and press "Create App".
 
 ![App name](assets/images/app_name.png)
 
-3. Add Config Vars
+3. Add config vars
 In the menu you click **settings** and then **Reveal Config Vars**. Input **PORT** as key and **8000** as value, press "Add".
 
 ![Config Vars](assets/images/config_vars.png)
 
 4. Add buildpacks
-Under config vars you can see **Buildpacks**. Click "Add buildpacks" and add python and nodejs (in that order). Click "Save changes".
+Under config vars you can see **buildpacks**. Click "add buildpacks" and add **python** and **nodejs** (in that order). Click "Save changes".
 
 ![Buildpacks](assets/images/buildpacks.png)
 
@@ -222,7 +222,7 @@ As a workaround, you can add a PEP8 validator to your Gitpod Workspace directly 
 <h2 id="credits">Credits</h2>
 <h3 id="code-issues">Issues with code</h3>
 
-Most of the daily problems were solved thanks to [Stackoverflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/)
+Most of the daily problems were solved thanks to [Stackoverflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/).
 
 <h3 id="code">Code</h3>
 
@@ -231,10 +231,10 @@ A big thanks to [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s) with 
 <h3 id="acknowledgements">Acknowledgements</h3>
 
 This website was completed as a Portfolio Project 3 for the Fullstack Diploma at [Codeinstitute](https://codeinstitute.net/).
-I want to thank my friend Martin for helping me understand some logic with functions in the start of this project.
+I want to thank my friend Martin for helping me understand some logic with functions at the start of this project.
 
-The project is for educational purpose only and not for public consumption.
-
-
-William Tynér, October 2022.
+The project is for educational purposes only and not for public consumption.
+<br>
+<br>
+William Tynér, October 2022.<br>
 [LinkedIn](https://www.linkedin.com/in/williamtyner/)
