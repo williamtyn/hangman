@@ -11,7 +11,7 @@ HANGMAN = """
               ===
           """
 
-NICKNAME = ''
+nickname = ''
 
 
 def choose_nickname():
@@ -107,7 +107,7 @@ def game_loop():
     If/elif of the return from letter_in_word to see what to print.
     """
     print('Welcome to Hangman Game!\n')
-    print(hangman)
+    print(HANGMAN)
     choose_nickname()
     see_rules()
     game = True
