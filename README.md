@@ -28,6 +28,9 @@ Here you could enjoy yourself guessing words or let you man get hanged if you gu
 </ul>
 <li><a href="#user-stories">User stories</a>
 <li><a href="#bugs">Bugs</a></li>
+<ul>
+<li><a href="#solved-bugs">Solved Bugs</a></li>
+</ul>
 <li><a href="#future-features">Future features</a></li>
 <li><a href="#technologies">Technologies</a></li>
 <li><a href="#deployment">Deployment</a></li>
@@ -85,6 +88,8 @@ As a player i want to be able to play the game many times with different words t
 <h2 id="bugs">Bugs</h2>
 If the player want to change their nickname they need to end and restart the whole program. If they choose to play again after win or lose the game repeats with the same nickname.
 
+<h3 id="solved-bugs">Solved Bugs</h3>
+
 <h2 id="future-features">Future features</h2>
 
 ### Change nickname
@@ -92,6 +97,7 @@ In the future a feature for changing nickname could be applied if someone else w
 <h2 id="technologies">Technologies</h2>
 
 Random Words was genereated by [Randomlists.com](https://www.randomlists.com/)
+To check spelling and grammar i used [Free Grammar Checker](https://quillbot.com/grammar-check)
 
 <h2 id="deployment">Deployment</h2>
 
