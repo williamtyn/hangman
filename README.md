@@ -3,12 +3,12 @@
 Here you can enjoy yourself and, at the same time, train your spelling with this popular guessing words game.
 
 ## Live Site
-[Go to site](#) 
+[Go to site](https://williams-hangman-game.herokuapp.com/) 
 
 ## Repository
-[View repository](#) 
+[View repository](https://github.com/williamtyn/hangman) 
 
-![Image mockup of the website in a computer, tablet and phone](#)
+![Image mockup of the website in a computer, tablet and phone](assets/images/hangman_mockup.png)
 
 ## Catalouge
 <ul>
