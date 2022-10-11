@@ -33,6 +33,7 @@ Here you can enjoy yourself and, at the same time, train your spelling with this
 </ul>
 <li><a href="#future-features">Future features</a></li>
 <li><a href="#technologies">Technologies</a></li>
+<li><a href="#validation">Validation</a></li>
 <li><a href="#deployment">Deployment</a></li>
 <li><a href="#credits">Credits</a></li>
 <ul>
@@ -128,21 +129,21 @@ If a player doesn't want to play again, the program ends.
 <h2 id="user-stories">User stories</h2>
 
 ### User Story 1
-As a player i want to play a wordgame against the computer to improve my spelling of english words.
+As a player, I want to play a word game against the computer to improve my spelling of English words.
 
-*The player get the opportunity to improve their spelling of words in the hangman game. They player get hints of the word when the guess a letter and need to both use their vocabulary and spelling to guess the right word.*
+*The player gets the opportunity to improve their spelling of words in the hangman game. When the players guess a letter, they receive a hint of the word and must use both their vocabulary and spelling to guess the correct word.*
 
 
 ### User Story 2
-As a player i want to be able to to choose my own nickname or player name to feel more satisfied if i win the game.
+As a player, I want to be able to choose my own nickname or player name to feel more satisfied if I win the game.
 
-*In the beginning of the game the player must choose a nickname to be able to play the game. If the player wins the get the Congrats message with their nickname, if they lose they get a well played message with their name.*
+*At the beginning of the game, the player must choose a nickname to be able to play the game. If the player wins, they get the "Congrats" message with their nickname to boost their confidence.*
 
 
 ### User Story 3
-As a player i want to be able to play the game many times with different words to keep practice my spelling.
+As a player, I want to be able to play the game many times with different words to keep practicing my spelling.
 
-*In the words list you find a lot of different word which reduces the risk of the random word to be picked again and at the same time the player get many different words to train their spelling with. At the end of each game the player have the option to play again " Do you want to play again? Y/N ".*
+*The word list contains a variety of words, which reduces the likelihood of the random word being chosen again while also providing the player with a variety of words to practice spelling with. At the end of each game, the players have the option to play again. " Do you want to play again? Y/N ".*
 
 
 <h2 id="bugs">Bugs</h2>
@@ -172,6 +173,19 @@ In the future, a feature for changing nicknames could be added if someone else w
 * To check spelling and grammar i used [Free Grammar Checker](https://quillbot.com/grammar-check)<br>
 * To make the Readme Mockup i used [Multi Device Mockup Generator](https://techsini.com/multi-mockup/)<br>
 * The library that was imported is **random** and **colorama**<br>
+
+<h2 id="validation">Validation</h2>
+
+Because the online validator for PEP8 is currently offline. I´ve followed the steps that Kevin_ci on Code Institute provided.
+
+As a workaround, you can add a PEP8 validator to your Gitpod Workspace directly by following these steps:
+1. Run the command pip3 install pycodestyle  Note that this extension may already be installed, in which case this command will do nothing.
+2. In your workspace, press Ctrl+Shift+P (or Cmd+Shift+P on Mac).
+3. Type the word linter into the search bar that appears, and click on Python: Select Linter from the filtered results (image 1).
+4. Select pycodestyle from the list (image 2).
+5. PEP8 errors will now be underlined in red, as well as being listed in the PROBLEMS tab beside your terminal.
+
+After that i worked from start to finish to erase every linting issue in the code.
 
 <h2 id="deployment">Deployment</h2>
 
@@ -209,15 +223,6 @@ Click "Deploy Branch" to manual deploy the site.
 If everything is OK then you recieve "Your app was successfully deployed" and can click "View".
 
 ![Deployment Successfully](assets/images/deployment_success.png)
-
-Because the online validator for PEP8 is currently offline. I´ve followed the steps that Kevin_ci on Code Institute provided.
-
-As a workaround, you can add a PEP8 validator to your Gitpod Workspace directly by following these steps:
-1. Run the command pip3 install pycodestyle  Note that this extension may already be installed, in which case this command will do nothing.
-2. In your workspace, press Ctrl+Shift+P (or Cmd+Shift+P on Mac).
-3. Type the word linter into the search bar that appears, and click on Python: Select Linter from the filtered results (image 1).
-4. Select pycodestyle from the list (image 2).
-5. PEP8 errors will now be underlined in red, as well as being listed in the PROBLEMS tab beside your terminal.
 
 <h2 id="credits">Credits</h2>
 <h3 id="code-issues">Issues with code</h3>
