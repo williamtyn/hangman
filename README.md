@@ -2,13 +2,13 @@
 ## Welcome to the Hangman Game!
 Here you can enjoy yourself and, at the same time, train your spelling with this popular guessing words game.
 
+![Image mockup of the website in a computer, tablet and phone](assets/images/hangman_mockup.png)
+
 ## Live Site
 [Go to site](https://williams-hangman-game.herokuapp.com/) 
 
 ## Repository
 [View repository](https://github.com/williamtyn/hangman) 
-
-![Image mockup of the website in a computer, tablet and phone](assets/images/hangman_mockup.png)
 
 ## Catalouge
 <ul>
@@ -215,9 +215,19 @@ As a workaround, you can add a PEP8 validator to your Gitpod Workspace directly 
 
 <h2 id="credits">Credits</h2>
 <h3 id="code-issues">Issues with code</h3>
-<h3 id="student-support">Student Support</h3>
+
+Most of the daily problems were solved thanks to [Stackoverflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/)
+
 <h3 id="code">Code</h3>
+
+A big thanks to [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s) with the video for inspiration on how to solve the challenge with getting the hidden words do display the letter when the player guesses right.
+
 <h3 id="acknowledgements">Acknowledgements</h3>
+
+This website was completed as a Portfolio Project 3 for the Fullstack Diploma at [Codeinstitute](https://codeinstitute.net/).
+I want to thank my friend Martin for helping me understand some logic with functions in the start of this project.
+
+The project is for educational purpose only and not for public consumption.
 
 
 William Tynér, October 2022.
