@@ -60,11 +60,10 @@ def letter_in_word(word):
 
     Code enumerate source https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s
     """
-    lives = 3  # how many attempts the player have
+    lives = 5  # how many attempts the player have
     guessed_letters = []  # will display already guessed letters for player
     hidden_word = '_' * len(word)
     while lives > 0:
-        print(word)
         print(f'Lives: {lives}')
         print("Guessed:", ' '.join(guessed_letters))
         print(hidden_word)
