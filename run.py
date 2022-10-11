@@ -19,7 +19,7 @@ def choose_nickname():
     As a player, you can choose your player nickname.
     """
     global nickname 
-    choose_nick = input('Choose a nickname:')
+    choose_nick = input('Choose a nickname:\n')
     nickname = choose_nick
     print(f'Welcome {nickname}!\n')
 
