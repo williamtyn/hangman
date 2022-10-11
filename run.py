@@ -1,5 +1,5 @@
-import random  # import random library to random words from words.py
-from colorama import Fore, Back, Style  # import for print in colors
+import random  # import random library to random_word from words.py
+from colorama import Fore, Style  # import library for print in colors
 from words import words
 
 
@@ -16,7 +16,7 @@ nickname = ''
 
 def choose_nickname():
     """
-    As a player you can choose your player nickname
+    As a player, you can choose your player nickname.
     """
     global nickname 
     choose_nick = input('Choose a nickname:')
@@ -26,23 +26,26 @@ def choose_nickname():
 
 def see_rules():
     """
-    Player can choose to see rules before entering the game
+    Players can choose to see the rules before entering the game.
+    If a player doesn't want to see the rules, the game begins.
     """
     rules = input('Do you want to see the rules? Y/N\n').upper()
     if rules == 'Y':
-        print('Hangman is game of words where you guess the secret word'
-              'the computer shuffles.')
+        print('Hangman is a game of words' 
+              'where you guess the secret word as the computer shuffles them.')
         print('You can press any letter between A – Z to guess if that letter'
               'is in the word.')
-        print('If you think you know the word you can guess by typing it in.')
-        print('For each wrong word or letter you will lose one of your lives.')
+        print('If you think you know the word,' 
+              'you can guess it by typing it in.')
+        print('For each wrong word or letter,' 
+              'you will lose one of your lives.')
         print('You have 6 lives to guess the right word before it is'
               'Game Over!\n')
 
 
 def random_word():
     """
-    Generates random word from list words.
+    Generates random words from the list in words.py.
     """
     word_random = random.choice(words).upper()
     return word_random
@@ -50,8 +53,10 @@ def random_word():
 
 def letter_in_word(word):
     """
-    User input of letter/word and validating that input 
+    User input of letter/word and validating that input
     contains letter and nothing else.
+    Returns True if the player guesses the right word.
+    Returns False if the player is out of lives.
 
     Code enumerate source https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s
     """
@@ -63,7 +68,7 @@ def letter_in_word(word):
         print(f'Lives: {lives}') 
         print("Guessed:", ' '.join(guessed_letters))
         print(hidden_word)
-        guess = input('Please input a letter/word between A - Z\n').upper()
+        guess = input('Please input a letter or word between A - Z\n').upper()
         if (guess.isalpha()) is True:
             if guess in word and guess == word:
                 print(f'Congrats {nickname}, {guess} is the right word!')
@@ -81,13 +86,13 @@ def letter_in_word(word):
                 lives -= 1
                 guessed_letters += guess  
         elif (guess.isalpha()) is False:
-            print('Your guess can only contain letters A - Z, try again!\n')
+            print('Your guess can only contain letters A - Z. Try again!\n')
     return False
 
 
 def play_again():
     """
-    Ask player if they want to play again. If not the program ends.
+    Asks the player if they want to play again. If not, the program ends.
     """
     if input('Do you want to play again? Y/N\n').upper() == 'Y':
         return True
@@ -97,11 +102,9 @@ def play_again():
 
 def game_loop():
     """
-    Running main program.
-    Player chooses nickname
-    Player can choose to see rules.
-    Check if the player won or not.
-    If 
+    Running the main program and functions.
+    Loops the return so player can play again.
+    If/elif of the return from letter_in_word to see what to print.
     """
     print('Welcome to Hangman Game!\n')
     print(hangman)
@@ -119,6 +122,9 @@ def game_loop():
 
 
 def game_over():
+    """
+    Prints the word 'Game Over' in asterisks and colours it red.
+    """
     gameover = Fore.RED + """
             *****   ***  **  ** *****
             *      *   * *  * * *
@@ -137,6 +143,9 @@ def game_over():
 
 
 def win_game():
+    """
+    Prints the word 'You Win' in asterisks and colours it green.
+    """
     win = Fore.GREEN + """
             *    *   ****  *     *
              *  *   *    * *     *
