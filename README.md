@@ -101,6 +101,41 @@ To check spelling and grammar i used [Free Grammar Checker](https://quillbot.com
 
 <h2 id="deployment">Deployment</h2>
 
+1. Log in to Heroku and create new app.
+The first thing when deploying is to log in to [Heroku](https://dashboard.heroku.com/apps) and click new -> create app.
+
+![Create new app](assets/images/create_new_app.png)
+
+2. Give your app a name.
+Then you need to select a new for your new app. I named my app "williams-hangman-game". Then select your region and press "Create App".
+
+![App name](assets/images/app_name.png)
+
+3. Add Config Vars
+In the menu you click **settings** and then **Reveal Config Vars**. Input **PORT** as key and **8000** as value, press "Add".
+
+![Config Vars](assets/images/config_vars.png)
+
+4. Add buildpacks
+Under config vars you can see **Buildpacks**. Click "Add buildpacks" and add python and nodejs (in that order). Click "Save changes".
+
+![Buildpacks](assets/images/buildpacks.png)
+
+5. Deploy section
+Go to **Deploy** in menu and choose **GitHub** as your **Deployment Method**. Confirm that you want to connect to GitHub and search your repository name. For this project it is "Hangman". Click "connect" and link your repository to Heroku.
+
+![Deployment Method](assets/images/deployment_method.png)
+
+6. Deploy branch
+Click "Deploy Branch" to manual deploy the site.
+
+![Deployment Method](assets/images/deploy_branch.png)
+
+7. App successfully deployed
+If everything is OK then you recieve "Your app was successfully deployed" and can click "View".
+
+![Deployment Successfully](assets/images/deployment_success.png)
+
 Because the online validator for PEP8 is currently offline. I´ve followed the steps that Kevin_ci on Code Institute provided.
 
 As a workaround, you can add a PEP8 validator to your Gitpod Workspace directly by following these steps:
