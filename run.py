@@ -35,6 +35,7 @@ def see_rules():
               'where you guess the secret word as the computer shuffles them.')
         print('You can press any letter between A – Z to guess if that letter '
               'is in the word.')
+        print('You have 1 chance to guess the whole word')
         print('If you think you know the word,'
               'you can guess it by typing it in.')
         print('For each wrong word or letter,'
@@ -72,6 +73,9 @@ def letter_in_word(word):
             if guess in word and guess == word:
                 print(f'Congrats {nickname}, {guess} is the right word!')
                 return True
+            elif len(guess) > 1:
+                print(f'{guess} is not the right word')
+                break
             elif guess in word and guess not in guessed_letters:
                 guessed_letters += guess
                 show_letters = list(hidden_word)
