@@ -172,7 +172,8 @@ In the future, a feature for changing nicknames could be added if someone else w
 * Random Words was genereated by [Randomlists.com](https://www.randomlists.com/)<br>
 * To check spelling and grammar i used [Free Grammar Checker](https://quillbot.com/grammar-check)<br>
 * To make the Readme Mockup i used [Multi Device Mockup Generator](https://techsini.com/multi-mockup/)<br>
-* The library that was imported is **random** and **colorama**<br>
+* The **random** library is required for the possibility of randomly selecting a word from the word list.
+* The **colorama** library is required for the possibility of styling the prints "You Win" and "Game Over" in different colours.
 
 <h2 id="validation">Validation</h2>
 
