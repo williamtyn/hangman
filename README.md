@@ -75,13 +75,46 @@ If the player has never played before or doesn´t remember the rules, they get a
 ![Rules](assets/images/features/rules.png)
 
 <h3 id="random">Random words generated</h3>
+We collected a list with over 100 different words that the program randomly picks from. The program also hides the letters in the words until the player has guessed the correct letter.
 
+![Random words](assets/images/features/random_words.png)
 
 <h3 id="guess-word">Guess word</h3>
+As a player, you can choose to guess a letter from the alphabet or you can guess the word. Every letter you guess gets added to your guessed letters list. If the letter is in the word, the letter gets displayed in the right position and the player doesn´t lose any lives.
+
+![Guess word](assets/images/features/guess_word.png)
+
 <h3 id="validation">Validation of input</h3>
+The player can only guess letters between A to Z in the alphabet and receive a message saying "Your guess can only contain letters A - Z. Try again!" if they try anything else. The player doesn´t lose any lives in this case.
+
+![Validation of letters](assets/images/features/validation_only_letters.png)
+
+If the player guesses a letter that they have already guessed, they receive a message saying "You have already guessed (and the letter). The player doesn´t lose any lives in this case.
+
+![Validation already guessed](assets/images/features/validation_guessed.png)
+
+If the letter is in the alphabet, it is not in the previous guesses or in the word. The player loses a life.
+
+![Life loss](assets/images/features/lose_life.png)
+
 <h3 id="lives-and-guess">Lives and guesses</h3>
+The player has 5 lives, as mentioned above. If the letter validation is correct and the letter is not in the word, the player loses a life.
+
+All guessed letters get added to the guessed letters list, as the player can always see.
+
 <h3 id="win-or-game">Win or Game over</h3>
+The player wins the game when the guess is the correct word and they still have lives left. They can see the print of "You Win" with asterisks.
+
+If the player doesn't have any lives left, they get the message "Game Over" with asterisks.
+
+![Life loss](assets/images/features/gameover.png)
+
 <h3 id="play-again">Play again</h3>
+After every run, win or game over, the player gets the question if they want to play again. If they want to play again, the program runs again from the point where it picks a random word.
+
+If a player doesn't want to play again, the program ends.
+
+![Play again](assets/images/features/play_again.png)
 
 <h2 id="user-stories">User stories</h2>
 

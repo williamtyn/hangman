@@ -39,7 +39,7 @@ def see_rules():
               'you can guess it by typing it in.')
         print('For each wrong word or letter,'
               'you will lose one of your lives.')
-        print('You have 6 lives to guess the right word before it is '
+        print('You have 5 lives to guess the right word before it is '
               'Game Over!\n')
 
 
