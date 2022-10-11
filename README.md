@@ -11,17 +11,16 @@ Here you can enjoy yourself and, at the same time, train your spelling with this
 [View repository](https://github.com/williamtyn/hangman) 
 
 ## Catalouge
-<ul>
 <li><a href="#target-group">Target Group</a></li>
-<li><a href="#flowchart">Flowchart</a>
-<li><a href="#how-to-play">How to play</a>
-<li><a href="#features">Features</a>
+<li><a href="#flowchart">Flowchart</a></li>
+<li><a href="#how-to-play">How to play</a></li>
+<li><a href="#features">Features</a></li>
 <ul>
 <li><a href="#welcome">Welcome</a></li>
 <li><a href="#choose-nickname">Choose nickname</a></li>
 <li><a href="#rules">See rules</a></li>
 <li><a href="#random">Random word generated</a></li>
-<li><a href="#guess-word">Guess word</a></li></ul>
+<li><a href="#guess-word">Guess word</a></li>
 <li><a href="#validation">Validation of input</a></li>
 <li><a href="#lives-and-guess">Lives and guesses</a></li>
 <li><a href="#win-or-game">Win or Game over</a></li>
@@ -43,21 +42,28 @@ Here you can enjoy yourself and, at the same time, train your spelling with this
 <li><a href="#acknowledgements">Acknowledgements</a></li></ul>
 </li>
 </ul>
-
+<br>
 <h2 id="target-group">Target Group</h2>
 The Hangman game is for both educational use and fun. Because you can train your spelling, one of the main target groups is schools that want a fun way of teaching students the spelling of words.
-
+<br>
+<br>
 <h2 id="flowchart">Flowchart</h2> 
-To have some structure and to be able to understand which codes and functions the program would have, I have created a flowchart using
 
-[Lucid](https://lucid.app/).
+To have some structure and to be able to understand which codes and functions the program would have, I have created a flowchart using [Lucid](https://lucid.app/).
 
 In the flowchart, you can see the whole process from start to finish. All the code is based on the flowchart, and beyond that, I also added a function to choose a nickname for the player.
 
 ![Flowchart image](assets/images/hangman_flowchart.png)
 
-
+<br>
 <h2 id="how-to-play">How to play</h2>
+
+Hangman is a game of words where you guess the secret word as the computer shuffles them.<br>
+You can press any letter between A – Z to guess if that letter is in the word.<br>
+You have 1 chance to guess the whole word.<br>
+If you think you know the word, you can guess it by typing it in.<br>
+For each wrong word or letter, you will lose one of your lives.<br>
+You have 5 lives to guess the right word before it is Game Over!.<br>
 
 <h2 id="features">Features</h2>
 <h3 id="welcome">Welcome</h3>
