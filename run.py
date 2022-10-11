@@ -3,7 +3,7 @@ from colorama import Fore, Style  # import library for print in colors
 from words import words
 
 
-hangman = """
+HANGMAN = """
            +---+
            O   |
           /|\  |
@@ -11,7 +11,7 @@ hangman = """
               ===
           """
 
-nickname = ''
+NICKNAME = ''
 
 
 def choose_nickname():
@@ -31,15 +31,15 @@ def see_rules():
     """
     rules = input('Do you want to see the rules? Y/N\n').upper()
     if rules == 'Y':
-        print('Hangman is a game of words' 
+        print('Hangman is a game of words '
               'where you guess the secret word as the computer shuffles them.')
-        print('You can press any letter between A – Z to guess if that letter'
+        print('You can press any letter between A – Z to guess if that letter '
               'is in the word.')
-        print('If you think you know the word,' 
+        print('If you think you know the word,'
               'you can guess it by typing it in.')
-        print('For each wrong word or letter,' 
+        print('For each wrong word or letter,'
               'you will lose one of your lives.')
-        print('You have 6 lives to guess the right word before it is'
+        print('You have 6 lives to guess the right word before it is '
               'Game Over!\n')
 
 
@@ -65,7 +65,7 @@ def letter_in_word(word):
     hidden_word = '_' * len(word)
     while lives > 0:
         print(word)
-        print(f'Lives: {lives}') 
+        print(f'Lives: {lives}')
         print("Guessed:", ' '.join(guessed_letters))
         print(hidden_word)
         guess = input('Please input a letter or word between A - Z\n').upper()
@@ -75,7 +75,7 @@ def letter_in_word(word):
                 return True
             elif guess in word and guess not in guessed_letters:
                 guessed_letters += guess
-                show_letters = list(hidden_word)  
+                show_letters = list(hidden_word)
                 ind = [i for i, letter in enumerate(word) if letter == guess]
                 for index in ind:  # code to enumerate is of inspiration
                     show_letters[index] = guess  # from see docstring
@@ -84,7 +84,7 @@ def letter_in_word(word):
                 print(f'You have already guessed {guess}')
             elif guess != word:
                 lives -= 1
-                guessed_letters += guess  
+                guessed_letters += guess
         elif (guess.isalpha()) is False:
             print('Your guess can only contain letters A - Z. Try again!\n')
     return False
@@ -156,7 +156,7 @@ def win_game():
             *       *  ***  *    *  *
             *       *   *   * *  *  *
             *   *   *   *   *  * *  *
-             * * * *    *   *   **  
+             * * * *    *   *   **
               *   *    ***  *    *  *
                 """
     print(win)
