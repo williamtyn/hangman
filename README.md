@@ -140,9 +140,17 @@ As a player i want to be able to play the game many times with different words t
 
 
 <h2 id="bugs">Bugs</h2>
-If the player want to change their nickname they need to end and restart the whole program. If they choose to play again after win or lose the game repeats with the same nickname.
+If the player wants to change their nickname, they need to end and restart the whole program. If they choose to play again after winning or losing, the game repeats with the same nickname and they don't have an option to change it.
 
 <h3 id="solved-bugs">Solved Bugs</h3>
+
+1. I got stuck in the while loop where the program checks the guesses. When the player guessed the right word, the loop broke, and at the end of the loop, a print with "Game Over" was shown.
+
+I solved that by changing the structure to return instead. So if the player guesses the right word, the function returns True. If the player loses all lives, the function returns False. By moving out the check for win or loss, I was able to solve the bug.
+
+2. When deploying, I found that when a player guessed a word that was wrong, all letters were added to the guessed letters list. Because of that, the player couldn't try the letters separated again. Because of that, the player got stuck.
+
+*I solved that by adding a validation for the number of letters in the guess. If the player guesses more than one letter, they're guessing for the word. If the word is wrong, it's game over.*
 
 <h2 id="future-features">Future features</h2>
 
