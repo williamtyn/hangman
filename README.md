@@ -19,7 +19,7 @@ Here you can enjoy yourself and, at the same time, train your spelling with this
 <ul>
 <li><a href="#welcome">Welcome</a></li>
 <li><a href="#choose-nickname">Choose nickname</a></li>
-li><a href="#rules">See rules</a></li>
+<li><a href="#rules">See rules</a></li>
 <li><a href="#random">Random word generated</a></li>
 <li><a href="#guess-word">Guess word</a></li></ul>
 <li><a href="#validation">Validation of input</a></li>
@@ -45,9 +45,12 @@ li><a href="#rules">See rules</a></li>
 </ul>
 
 <h2 id="target-group">Target Group</h2>
+The Hangman game is for both educational use and fun. Because you can train your spelling, one of the main target groups is schools that want a fun way of teaching students the spelling of words.
 
 <h2 id="flowchart">Flowchart</h2> 
-To have some structure and to be able to understand which codes and functions the program would have, I have created a flowchart using [Lucid](https://lucid.app/).
+To have some structure and to be able to understand which codes and functions the program would have, I have created a flowchart using
+
+[Lucid](https://lucid.app/).
 
 In the flowchart, you can see the whole process from start to finish. All the code is based on the flowchart, and beyond that, I also added a function to choose a nickname for the player.
 
