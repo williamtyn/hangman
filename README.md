@@ -1,6 +1,6 @@
 # Portfolio Project 3 - Python Essentials
 ## Welcome to the Hangman Game!
-Here you could enjoy yourself guessing words or let you man get hanged if you guess wrong.
+Here you can enjoy yourself and, at the same time, train your spelling with this popular guessing words game.
 
 ## Live Site
 [Go to site](#) 
@@ -19,6 +19,7 @@ Here you could enjoy yourself guessing words or let you man get hanged if you gu
 <ul>
 <li><a href="#welcome">Welcome</a></li>
 <li><a href="#choose-nickname">Choose nickname</a></li>
+li><a href="#rules">See rules</a></li>
 <li><a href="#random">Random word generated</a></li>
 <li><a href="#guess-word">Guess word</a></li></ul>
 <li><a href="#validation">Validation of input</a></li>
@@ -46,9 +47,9 @@ Here you could enjoy yourself guessing words or let you man get hanged if you gu
 <h2 id="target-group">Target Group</h2>
 
 <h2 id="flowchart">Flowchart</h2> 
-To have some structure and to be able to understand which code and functions the program would have, i´ve created a flowchart using [Lucid](https://lucid.app/).
+To have some structure and to be able to understand which codes and functions the program would have, I have created a flowchart using [Lucid](https://lucid.app/).
 
-In the flowchart you can see thoe whole flow from start to end. All code based on the flowchart and beyond that i´va also added a function to choose nickname for player.
+In the flowchart, you can see the whole process from start to finish. All the code is based on the flowchart, and beyond that, I also added a function to choose a nickname for the player.
 
 ![Flowchart image](assets/images/hangman_flowchart.png)
 
@@ -57,8 +58,25 @@ In the flowchart you can see thoe whole flow from start to end. All code based o
 
 <h2 id="features">Features</h2>
 <h3 id="welcome">Welcome</h3>
+The player can see the text "Welcome to Hangman Game" and the visual Hangman printed.
+
+![Welcome image](assets/images/features/welcome.png)
+
 <h3 id="choose-nickname">Choose nickname</h3>
-<h3 id="random">Random word generated</h3>
+The player must choose their nickname and player name to play the game.
+
+![Nickname](assets/images/features/nickname.png)
+
+<h3 id="rules">See rules</h3>
+If the player has never played before or doesn´t remember the rules, they get an option to see the rules before they start the game. If the player don´t want to see the rules, the game starts.
+
+![See rules](assets/images/features/see_rules.png)
+
+![Rules](assets/images/features/rules.png)
+
+<h3 id="random">Random words generated</h3>
+
+
 <h3 id="guess-word">Guess word</h3>
 <h3 id="validation">Validation of input</h3>
 <h3 id="lives-and-guess">Lives and guesses</h3>
