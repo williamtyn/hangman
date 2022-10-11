@@ -1,5 +1,7 @@
 import random  # import random library to random words from words.py
+from colorama import Fore, Back, Style  # import for print in colors
 from words import words
+
 
 hangman = """
            +---+
@@ -64,7 +66,7 @@ def letter_in_word(word):
         guess = input('Please input a letter/word between A - Z\n').upper()
         if (guess.isalpha()) is True:
             if guess in word and guess == word:
-                print(f'Congrats {nickname}, {guess} is the right word')
+                print(f'Congrats {nickname}, {guess} is the right word!')
                 return True
             elif guess in word and guess not in guessed_letters:
                 guessed_letters += guess
@@ -94,6 +96,13 @@ def play_again():
 
 
 def game_loop():
+    """
+    Running main program.
+    Player chooses nickname
+    Player can choose to see rules.
+    Check if the player won or not.
+    If 
+    """
     print('Welcome to Hangman Game!\n')
     print(hangman)
     choose_nickname()
@@ -110,7 +119,7 @@ def game_loop():
 
 
 def game_over():
-    gameover = """
+    gameover = Fore.RED + """
             *****   ***  **  ** *****
             *      *   * *  * * *
             *  *** ***** *    * ***
@@ -124,10 +133,11 @@ def game_over():
              ****    *     ***** *  *
                 """
     print(gameover)
+    print(Style.RESET_ALL)
 
 
 def win_game():
-    win = """
+    win = Fore.GREEN + """
             *    *   ****  *     *
              *  *   *    * *     *
               *     *    * *     *
@@ -141,6 +151,8 @@ def win_game():
               *   *    ***  *    *  *
                 """
     print(win)
+    print(Style.RESET_ALL)
 
 
-game_loop()
+if __name__ == '__main__':
+    game_loop()
