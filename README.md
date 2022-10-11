@@ -152,14 +152,20 @@ I solved that by changing the structure to return instead. So if the player gues
 
 *I solved that by adding a validation for the number of letters in the guess. If the player guesses more than one letter, they're guessing for the word. If the word is wrong, it's game over.*
 
+
 <h2 id="future-features">Future features</h2>
 
 ### Change nickname
 In the future a feature for changing nickname could be applied if someone else want to play without cancelling the program and start over.
+
 <h2 id="technologies">Technologies</h2>
 
+The project was built with [GitPod](https://gitpod.io/) and [GitHub](https://github.com/) 
+The project was deployed to [Heroku](https://dashboard.heroku.com/apps)
 Random Words was genereated by [Randomlists.com](https://www.randomlists.com/)
 To check spelling and grammar i used [Free Grammar Checker](https://quillbot.com/grammar-check)
+To make the Readme Mockup i used [Multi Device Mockup Generator](https://techsini.com/multi-mockup/)
+The library that was imported is **random** and **colorama**
 
 <h2 id="deployment">Deployment</h2>
 
