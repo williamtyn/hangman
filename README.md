@@ -15,8 +15,7 @@ Here you can enjoy yourself and, at the same time, train your spelling with this
 <li><a href="#flowchart">Flowchart</a></li>
 <li><a href="#how-to-play">How to play</a></li>
 <li><a href="#features">Features</a></li>
-<ul>
-<li><a href="#welcome">Welcome</a></li>
+<ul><li><a href="#welcome">Welcome</a></li>
 <li><a href="#choose-nickname">Choose nickname</a></li>
 <li><a href="#rules">See rules</a></li>
 <li><a href="#random">Random word generated</a></li>
@@ -24,25 +23,19 @@ Here you can enjoy yourself and, at the same time, train your spelling with this
 <li><a href="#validation">Validation of input</a></li>
 <li><a href="#lives-and-guess">Lives and guesses</a></li>
 <li><a href="#win-or-game">Win or Game over</a></li>
-<li><a href="#play-again">Play again?</a></li>
-</ul>
+<li><a href="#play-again">Play again?</a></li></ul>
 <li><a href="#user-stories">User stories</a>
 <li><a href="#bugs">Bugs</a></li>
-<ul>
-<li><a href="#solved-bugs">Solved Bugs</a></li>
-</ul>
+<ul><li><a href="#solved-bugs">Solved Bugs</a></li></ul>
 <li><a href="#future-features">Future features</a></li>
 <li><a href="#technologies">Technologies</a></li>
 <li><a href="#validation">Validation</a></li>
 <li><a href="#deployment">Deployment</a></li>
 <li><a href="#credits">Credits</a></li>
-<ul>
-<li><a href="#code-issues">Issues with code</a></li>
+<ul><li><a href="#code-issues">Issues with code</a></li>
 <li><a href="#student-support">Student Support</a></li>
 <li><a href="#code">Code</a></li></ul>
 <li><a href="#acknowledgements">Acknowledgements</a></li></ul>
-</li>
-</ul>
 <br>
 <h2 id="target-group">Target Group</h2>
 The Hangman game is for both educational use and fun. Because you can train your spelling, one of the main target groups is schools that want a fun way of teaching students the spelling of words.
@@ -61,10 +54,10 @@ In the flowchart, you can see the whole process from start to finish. All the co
 
 Hangman is a game of words where you guess the secret word as the computer shuffles them.<br>
 You can press any letter between A – Z to guess if that letter is in the word.<br>
-You have 1 chance to guess the whole word.<br>
+You have 1 chance to guess the whole word. If it's wrong, it's Game Over.<br>
 If you think you know the word, you can guess it by typing it in.<br>
-For each wrong word or letter, you will lose one of your lives.<br>
-You have 5 lives to guess the right word before it is Game Over!.<br>
+For each wrong letter, you will lose one of your lives.<br>
+You have 5 lives to guess letters for hints before it is Game Over!.<br>
 
 <h2 id="features">Features</h2>
 <h3 id="welcome">Welcome</h3>
@@ -73,12 +66,12 @@ The player can see the text "Welcome to Hangman Game" and the visual Hangman pri
 ![Welcome image](assets/images/features/welcome.png)
 
 <h3 id="choose-nickname">Choose nickname</h3>
-The player must choose their nickname and player name to play the game.
+The player must choose their nickname/player name to play the game.
 
 ![Nickname](assets/images/features/nickname.png)
 
 <h3 id="rules">See rules</h3>
-If the player has never played before or doesn´t remember the rules, they get an option to see the rules before they start the game. If the player don´t want to see the rules, the game starts.
+If the player has never played before or doesn't remember the rules, they get an option to see the rules before they start the game. If the player doesn't want to see the rules, the game starts.
 
 ![See rules](assets/images/features/see_rules.png)
 
@@ -153,7 +146,7 @@ If the player wants to change their nickname, they need to end and restart the w
 
 1. I got stuck in the while loop where the program checks the guesses. When the player guessed the right word, the loop broke, and at the end of the loop, a print with "Game Over" was shown.
 
-*I solved that by changing the structure to return instead. So if the player guesses the right word, the function returns True. If the player loses all lives, the function returns False. By moving out the check for win or loss, I was able to solve the bug.*
+*I solved that by changing the structure to return instead. So if the player guesses the right word, the function returns True. If the player loses all lives, the function returns False. By moving the check for win or loss out of the function, I was able to solve the bug.*
 
 2. When deploying, I found that when a player guessed a word that was wrong, all letters were added to the guessed letters list. Because of that, the player couldn't try the letters separated again. Because of that, the player got stuck.
 
@@ -164,6 +157,9 @@ If the player wants to change their nickname, they need to end and restart the w
 
 ### Change nickname
 In the future, a feature for changing nicknames could be added if someone else wants to play without having to cancel the program and start over.
+
+### Highscore
+Most of us like to compete, and because of that, a possible feature is to add highscores so students can compete against each other. That would make the game even more fun to play while still learning.
 
 <h2 id="technologies">Technologies</h2>
 
@@ -186,7 +182,7 @@ As a workaround, you can add a PEP8 validator to your Gitpod Workspace directly 
 4. Select pycodestyle from the list (image 2).
 5. PEP8 errors will now be underlined in red, as well as being listed in the PROBLEMS tab beside your terminal.
 
-After that i worked from start to finish to erase every linting issue in the code.
+**After that, I worked from start to finish with the ambition of erasing every linting issue in the code.**
 
 <h2 id="deployment">Deployment</h2>
 
@@ -232,7 +228,7 @@ Most of the daily problems were solved thanks to [Stackoverflow](https://stackov
 
 <h3 id="code">Code</h3>
 
-A big thanks to [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s) with the video for inspiration on how to solve the challenge with getting the hidden words do display the letter when the player guesses right.
+A big thanks to [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w&t=423s) with the video for inspiration on how to solve the challenge of getting the hidden words to display the letter when the player guesses right.
 
 <h3 id="acknowledgements">Acknowledgements</h3>
 
